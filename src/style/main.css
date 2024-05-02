@@ -30,13 +30,11 @@ body {
 .main {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start; /*메인축 정렬 메인축을 나누는 기준은 디렉션 flex 방향 row = x축 colum= y축*/
-  align-items: stretch; /* 교차축 정렬*/
+  justify-content: center; /*메인축 정렬 메인축을 나누는 기준은 디렉션 flex 방향 row = x축 colum= y축*/
   background-color: #cac6de;
   height: 60vh;
 }
 .group {
-  border: 1px solid rebeccapurple;
 }
 /* 슬로건 */
 .slogan {
@@ -50,4 +48,26 @@ body {
 .fotter-inner {
   background-color: #3d8fcb;
   height: 10vh;
+}
+.group1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #005289;
+}
+.group2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #4d9cbb;
+}
+
+.group3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #d9ecf3;
 }
