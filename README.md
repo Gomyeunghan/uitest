@@ -1,5 +1,7 @@
 #웹카페 실슴
 
+##5월2일
+
 - 스타일 시트 연결 (Normallize , Reset)
 - main.css
 - html 기본구조 (헤더~푸터 5단구조)
