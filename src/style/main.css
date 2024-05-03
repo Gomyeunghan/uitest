@@ -25,11 +25,18 @@ body {
 
 /* 헤더 */
 .header {
+  position: relative;
+  border-radius: 0 0 15px 15px;
   background-color: #3d8fcb;
-  height: 10vh;
+  height: 120px;
   padding: 0 50px;
 }
-
+.heading {
+  position: absolute;
+  background-color: #005289;
+  top: 45px;
+  left: 25px;
+}
 /* 비주얼 */
 .visual {
   background-color: #a0acde;
@@ -46,7 +53,6 @@ body {
   float: left;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
 }
 .group:nth-child(n + 2) {
   margin-left: 44px;
@@ -85,5 +91,10 @@ body {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+  }
+  .group {
+    float: left;
+    justify-content: center;
+    align-items: center;
   }
 }
