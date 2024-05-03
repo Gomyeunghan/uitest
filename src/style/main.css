@@ -39,10 +39,15 @@ body {
 .main {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between; /*메인축 정렬 메인축을 나누는 기준은 디렉션 flex 방향 row = x축 colum= y축*/
+  /* justify-content: space-between; 메인축 정렬 메인축을 나누는 기준은 디렉션 flex 방향 row = x축 colum= y축 */
   background-color: #cac6de;
   height: 60vh;
-  padding: 28px 16px 36px;
+  /* padding: 28px 16px 36px; */
+}
+.main-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 auto;
 }
 .group {
 }
