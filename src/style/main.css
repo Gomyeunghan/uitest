@@ -48,6 +48,9 @@ body {
   align-items: center;
   border: 1px solid red;
 }
+.wrapper {
+  float: right;
+}
 .main .group:nth-child(-n + 3) {
   margin: 0 15px;
 }
@@ -65,18 +68,18 @@ body {
   background-color: #3d8fcb;
   height: 10vh;
 }
-.group:nth-child(1) {
+.group1 {
   width: 250px;
   float: left;
   background-color: #005289;
 }
-.group:nth-child(2) {
+.group2 {
   width: 380px;
   float: left;
   background-color: #4d9cbb;
 }
 
-.group:nth-child(3) {
+.group3 {
   width: 190px;
   float: left;
   background-color: #d9ecf3;
