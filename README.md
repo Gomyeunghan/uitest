@@ -20,3 +20,5 @@
 - 레이아웃을 위해 margin 활용
 - 구조 선택자 nth 차일드 first 차일드 등
 - float 요소 안에서 float 요소로 정의하기 (order 속성 흉내 내기)
+- border-radiius
+- position 속성(relative , absolute)
