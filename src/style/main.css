@@ -40,19 +40,16 @@ body {
   min-height: 450px;
   display: flow-root;
   background-color: #cac6de;
-  padding: 0 15px;
+  padding: 28px 16px 36px;
 }
 .group {
-  display: flex;
+  float: left;
   justify-content: center;
   align-items: center;
   border: 1px solid red;
 }
-.wrapper {
-  float: right;
-}
-.main .group:nth-child(-n + 3) {
-  margin: 0 15px;
+.group:nth-child(n + 2) {
+  margin-left: 44px;
 }
 /* 슬로건 */
 .slogan {
@@ -70,17 +67,23 @@ body {
 }
 .group1 {
   width: 250px;
-  float: left;
   background-color: #005289;
 }
 .group2 {
   width: 380px;
-  float: left;
   background-color: #4d9cbb;
 }
 
 .group3 {
   width: 190px;
-  float: left;
   background-color: #d9ecf3;
+}
+
+/* flex를 지원하는 웹브라우저를 위한 스타일 */
+@supports (display: flex) {
+  .main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
 }
