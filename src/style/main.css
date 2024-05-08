@@ -53,16 +53,24 @@ body {
 @keyframes moveEffect {
   0% {
     font-size: 12px;
-    margin: 0;
+    translate: 0 0;
   }
   100% {
     font-size: 24px;
-    margin: 35px 0 0 200px;
+    translate: 300px 45px;
+  }
+}
+
+@keyframes fadeEffect {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
   }
 }
 
 .visual {
-  border: 1px solid black;
   /* background-color: #a0acde; */
   height: 120px;
   position: relative;
@@ -76,6 +84,10 @@ body {
     top: 0;
     left: 0;
     background-repeat: no-repeat;
+    animation: fadeEffect;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
 }
 .visual::before {
@@ -86,6 +98,7 @@ body {
   background-position: 0 0, 600px 10px;
 }
 .visual::after {
+  animation-delay: 2000ms;
   background-image: url(../images/ani_flower_03.png),
     url(../images/ani_flower_04.png);
   background-position: 300px 0px, 800px, 0;
@@ -93,12 +106,12 @@ body {
 }
 
 .visual-text {
-  background-color: #aaa;
+  display: inline-block;
   font-family: Georgia, "Times New Roman", Times, serif;
   animation: moveEffect;
   animation-duration: 5s;
   animation-fill-mode: forwards;
-  position: absolute;
+  position: relative;
   z-index: 1;
 }
 /* 메인 */
