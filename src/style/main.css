@@ -1,6 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 :root {
   --container-szie: 940px;
+}
+
+/* 기본 박스 사이징 설정 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* 버튼 스타일 */
@@ -10,9 +16,15 @@ button {
   border: 1px solid black;
   border-radius: 10px;
 }
-
+/* 그라디언트 배경, 배경 이미지 */
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  font-family: "SUIT Variable", sans-serif;
+  background: #ccc;
+  background-image: url("../images/bg_flower.png"),
+    linear-gradient(to bottom, #aaa 0%, #ccc 30%, #eee 50%, #fff 80%);
+  background-repeat: no-repeat;
+  background-position: 50% 0, 0 0;
 }
 .header,
 .visual,
@@ -27,26 +39,73 @@ body {
 .header {
   position: relative;
   border-radius: 0 0 15px 15px;
-  background-color: #3d8fcb;
+  background-color: #fff;
   height: 120px;
   padding: 0 50px;
 }
 .heading-logo {
   position: absolute;
-  background-color: #005289;
+  /* background-color: #005289; */
   top: 45px;
   left: 25px;
 }
 /* 비주얼 */
+@keyframes moveEffect {
+  0% {
+    font-size: 12px;
+    margin: 0;
+  }
+  100% {
+    font-size: 24px;
+    margin: 35px 0 0 200px;
+  }
+}
+
 .visual {
-  background-color: #a0acde;
-  height: 10vh;
+  border: 1px solid black;
+  /* background-color: #a0acde; */
+  height: 120px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+}
+.visual::before {
+  /* z-index: 1; */
+  /* background-color: yellow; */
+  background-image: url("../images/ani_flower_01.png"),
+    url("../images/ani_flower_02.png");
+  background-position: 0 0, 600px 10px;
+}
+.visual::after {
+  background-image: url(../images/ani_flower_03.png),
+    url(../images/ani_flower_04.png);
+  background-position: 300px 0px, 800px, 0;
+  /* background-color: pink; */
+}
+
+.visual-text {
+  background-color: #aaa;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  animation: moveEffect;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  z-index: 1;
 }
 /* 메인 */
 .main {
   min-height: 450px;
   display: flow-root;
-  background-color: #cac6de;
+  background-color: #fff;
   padding: 28px 16px 36px;
 }
 .group {
@@ -60,29 +119,29 @@ body {
 /* 슬로건 */
 .slogan {
   clear: both;
-  background-color: #443c40;
+  /* background-color: #443c40; */
   height: 10vh;
 }
 /* 푸터 */
 .footer {
-  background-color: #ecf1e9;
+  /* background-color: #ecf1e9; */
 }
 .fotter-inner {
-  background-color: #3d8fcb;
+  /* background-color: #3d8fcb; */
   height: 10vh;
 }
 .group1 {
   width: 250px;
-  background-color: #005289;
+  /* background-color: #005289; */
 }
 .group2 {
   width: 380px;
-  background-color: #4d9cbb;
+  /* background-color: #4d9cbb; */
 }
 
 .group3 {
   width: 190px;
-  background-color: #d9ecf3;
+  /* background-color: #d9ecf3; */
 }
 
 /* flex를 지원하는 웹브라우저를 위한 스타일 */
