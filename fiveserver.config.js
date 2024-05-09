@@ -1,6 +1,6 @@
 module.exports = {
   port: 8086,
-  root: "src/",
+  root: "/",
   host: "localhost",
   browser: "chrome",
   https: false,
